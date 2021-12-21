@@ -1,0 +1,14 @@
+CREATE TABLE [dbo].[Table]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [StudentName] NVARCHAR(50) NOT NULL, 
+    [IndexNumber] NVARCHAR(10) NOT NULL, 
+    [PointsESPB] INT NOT NULL, 
+    [StudyYear] INT NOT NULL, 
+    [AverageMark] DECIMAL(18, 2) NOT NULL, 
+    [IsBudget] BIT NOT NULL
+)
+SET IDENTITY_INSERT [dbo].[Table] ON
+INSERT INTO [dbo].[Table] ([Id], [StudentName], [IndexNumber], [PointsESPB], [StudyYear], [AverageMark], [IsBudget]) VALUES (1, N'Mika', N'80/2019', 120, 3, CAST(8.50 AS Decimal(18, 2)), 1)
+INSERT INTO [dbo].[Table] ([Id], [StudentName], [IndexNumber], [PointsESPB], [StudyYear], [AverageMark], [IsBudget]) VALUES (2, N'Lazar', N'70/2020', 60, 2, CAST(7.60 AS Decimal(18, 2)), 0)
+SET IDENTITY_INSERT [dbo].[Table] OFF
